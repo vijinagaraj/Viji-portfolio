@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Viji N — Portfolio</title>
+<meta name="description" content="Viji N - Final-year CSE student building toward MERN stack development. Portfolio, projects, and internship experience." />
+<meta property="og:title" content="Viji N — Portfolio" />
+<meta property="og:description" content="Final-year CSE student building toward MERN stack development." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="og-image.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23181b20%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22%23faf9f6%22 text-anchor=%22middle%22 font-family=%22monospace%22>V</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="nav-logo">Viji N</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <span class="theme-icon theme-icon-light">☀</span>
+    <span class="theme-icon theme-icon-dark">☾</span>
+  </button>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="avatar">
+      <img src="profile.jpg" alt="Viji N" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <span class="avatar-fallback">V</span>
+    </div>
+    <p class="prompt">&gt; whoami</p>
+    <h1>Viji N</h1>
+    <p class="role">Final-year CSE student, building toward MERN stack development</p>
+    <span class="status-pill"><span class="status-dot"></span>Open to internships and junior roles</span>
+    <p class="hero-desc">
+      I build things for the web and document the process as I learn.
+      Currently deep in JavaScript fundamentals on my way to full-stack projects.
+    </p>
+    <div class="hero-links">
+      <a href="https://github.com/" target="_blank" class="btn">
+        <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/viji-n-821382331/" target="_blank" class="btn">
+        <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14.82 0H1.18C.53 0 0 .53 0 1.18v13.64C0 15.47.53 16 1.18 16h13.64c.65 0 1.18-.53 1.18-1.18V1.18C16 .53 15.47 0 14.82 0zM4.75 13.5H2.4V6h2.35v7.5zM3.58 4.94c-.76 0-1.37-.62-1.37-1.37 0-.76.61-1.37 1.37-1.37.75 0 1.37.61 1.37 1.37 0 .75-.62 1.37-1.37 1.37zM13.6 13.5h-2.35V9.85c0-.87-.02-1.99-1.21-1.99-1.22 0-1.4.95-1.4 1.93v3.71H6.29V6h2.26v1.03h.03c.31-.59 1.08-1.21 2.22-1.21 2.38 0 2.8 1.56 2.8 3.6v4.08z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:vijin0369@gmail.com" class="btn">
+        <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 3A1.5 1.5 0 0 0 0 4.5v.379l8 4.267 8-4.267V4.5A1.5 1.5 0 0 0 14.5 3h-13zM16 6.246l-6.75 3.6a1.5 1.5 0 0 1-1.5 0L0 6.246V11.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V6.246z"/></svg>
+        Email
+      </a>
+      <a href="resume.pdf" target="_blank" class="btn btn-ghost">
+        <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.5 1a.5.5 0 0 0-1 0v7.793L5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 8.793V1z"/><path d="M3 12.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM2 14.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/></svg>
+        Resume
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I'm a final-year Computer Science and Engineering student at SRM Madurai
+      College for Engineering and Technology. I'm learning the MERN stack
+      from the ground up — HTML and CSS first, JavaScript next, then React
+      and Node.js — and building projects at every stage instead of only
+      following tutorials. I completed a one-month full-stack internship in
+      mid-2026, where I helped build a real hospital management platform. I'm
+      now applying that same hands-on approach to my own learning path.
+    </p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-group">
+      <p class="skills-label">Comfortable with</p>
+      <div class="tag-row">
+        <span class="tag tag-solid">HTML</span>
+        <span class="tag tag-solid">CSS</span>
+        <span class="tag tag-solid">Git &amp; GitHub</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <p class="skills-label">Currently learning</p>
+      <div class="tag-row">
+        <span class="tag tag-outline">JavaScript</span>
+        <span class="tag tag-outline">Responsive design</span>
+      </div>
+    </div>
+    <div class="skills-group">
+      <p class="skills-label">Exposure from internship</p>
+      <div class="tag-row">
+        <span class="tag tag-outline">React</span>
+        <span class="tag tag-outline">Node.js</span>
+        <span class="tag tag-outline">Express.js</span>
+        <span class="tag tag-outline">MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Full Stack Web Development Intern</h3>
+        <span class="entry-date">Jun – Jul 2026</span>
+      </div>
+      <p class="entry-org">White &amp; Box Tech Products &amp; Services, Bengaluru</p>
+      <p class="entry-body">
+        Worked on MediPulse, a full-stack hospital management platform,
+        as part of a one-month summer internship program. Contributed to a
+        MERN-based application using React, Node.js, Express, and MongoDB,
+        supporting features like patient records and appointment management.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <span class="badge">First project</span>
+        <div class="project-thumb">
+          <img src="project-portfolio.jpg" alt="Screenshot of personal portfolio website" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-thumb-fallback"><span>Add a screenshot</span></div>
+        </div>
+        <h3>Personal Portfolio Website</h3>
+        <p>
+          This site — built from scratch with HTML and CSS to practice
+          layout, positioning, flexbox, and responsive design.
+        </p>
+        <div class="tag-row small">
+          <span class="tag tag-outline">HTML</span>
+          <span class="tag tag-outline">CSS</span>
+        </div>
+        <a href="#" target="_blank" class="project-link">View live</a>
+      </div>
+      <div class="project-card placeholder">
+        <h3>Next project — in progress</h3>
+        <p>
+          A JavaScript-powered project is next on the roadmap, once
+          fundamentals and DOM manipulation are solid.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3>B.E. Computer Science and Engineering</h3>
+        <span class="entry-date">Final year</span>
+      </div>
+      <p class="entry-org">SRM Madurai College for Engineering and Technology</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="footer">
+  <p class="footer-prompt">&gt; contact --viji N</p>
+  <p class="footer-email"><a href="mailto:vijin0369@gmail.com">vijin0369@gmail.com</a></p>
+  <div class="footer-links">
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/viji-n-821382331/" target="_blank">LinkedIn</a>
+  </div>
+  <p class="footer-copy">© 2026 Viji N</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+</script>
+
+</body>
+</html>
